@@ -58,6 +58,12 @@ open ".wine/drive_c/Program Files (x86)/"
 
 Again, you dont have to put the TAM folder here since wine associates the exe files.
 
+One last thing, we need to make the folder for the INI. I'm not 100% sure why it fails to generate this on startup, but its simple enough:
+
+```
+mkdir ~/.wine/drive_c/users/`echo $USER`/AppData/Roaming/Echometer/TAM
+```
+
 At this point you should be able to just doubleclick the "TAM Application.exe" file.
 
 
