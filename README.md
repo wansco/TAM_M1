@@ -46,7 +46,7 @@ brew install --cask --no-quarantine wine-stable
 
 This is where it gets dicey. The TAM installer fails, but since we aren't concerned about the data acquisition sensor connectivity part (see Disclaimer #3 above), we can install TAM by simply copying the TAM folder from a Windows machine into the wine folder.
 
-If you have access to a windows machine and can transfer files, copy the entire TAM folder to your mac. The location of the TAM folder on your mac doesn't matter, but if you want to keep it windows-y, you can put it in the program files folder (NOTE: the wine folder is hidden, so you might have trouble finding this later)
+If you have access to a windows machine and can transfer files, just copy the entire TAM folder to your mac. The location of the TAM folder on your mac doesn't matter, but if you want to keep it windows-y, you can put it in the program files folder (NOTE: the wine folder is hidden, so you might have trouble finding this later)
 
 ```
 open ~/.wine/drive_c/Program\ Files\ \(x86\)/
@@ -55,14 +55,13 @@ Or if you dont like all the scary backslashes:
 ```
 open ".wine/drive_c/Program Files (x86)/"
 ```
+<br /><br />
 
-
-Heres the zip file for the TAM files. You should be able to run this from anywhere, but if you want to :
+Heres the zip file for the TAM files. You should be able to run this from anywhere, but if you want to keep with convention, copy it into the program files folder above:
 
 https://github.com/wansco/TAM_M1/releases/download/TAM_1.9.22/TAM.zip
 
-Again, you dont have to put the TAM folder here since wine associates the exe files.
-
+<br /><br />
 
 **One last thing**, we need to make the folder for the INI. I'm not 100% sure why it fails to generate this on startup, but its simple enough:
 
