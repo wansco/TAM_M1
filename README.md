@@ -1,6 +1,6 @@
 # TAM - Total Asset Monitor
 
-Run TAM on your apple silicon mac
+Run TAM on your apple silicon mac (or Intel macs)
 
 **Disclaimer #1**: This is not an officially sanctioned project. Basically, if something goes wrong, complain to me... if it works, let the folks at Echometer know.
 
@@ -21,6 +21,8 @@ A virtual machine such as VirtualBox doesnt yet fully support emulating x86 proc
 Wine is a utility to natively run windows binaries on non-windows systems.
 Rosetta is a macos utility to run x86 binaries on the M1.
 By combining the 2, we can run x86 windows binaries on the ARM-based M1/M2/M3... but it isnt always easy.
+
+Note: this also works on Intel macs, but it is advisable to use a VM like Virtualbox or Parallels.
 
 ## Steps
 
@@ -57,7 +59,7 @@ open ".wine/drive_c/Program Files (x86)/"
 ```
 <br /><br />
 
-Heres the zip file for the TAM files. You should be able to run this from anywhere, but if you want to keep with convention, copy it into the program files folder above:
+Here's the zip file for the TAM files. You should be able to run this from anywhere, but if you want to keep with convention, copy it into the program files folder above:
 
 https://github.com/wansco/TAM_M1/releases/download/TAM_1.9.22/TAM.zip
 
@@ -69,19 +71,19 @@ https://github.com/wansco/TAM_M1/releases/download/TAM_1.9.22/TAM.zip
 mkdir ~/.wine/drive_c/users/`echo $USER`/AppData/Roaming/Echometer/TAM
 ```
 
-At this point you should be able to just doubleclick the "TAM Application.exe" file.
+At this point you should be able to just double-click the "TAM Application.exe" file.
 
 
 
 
 # Troubleshooting
 
-What could go wrong? Probably a lot. Heres some things to try:
+What could go wrong? Probably a lot. Here's some things to try:
 
-Is wine installed and functional? Try running notepad
+Is wine installed and functional? Try running notepad.
 
 ```
 wine ~/.wine/drive_c/windows/notepad.exe
 ```
 
-Dont submit crash reports because that'll just confuse things. Remember, this is unsupported. Contact me if comething goes wrong.
+Don't submit crash reports because that'll just confuse things. Remember, this is unsupported. Contact me if something goes wrong.
