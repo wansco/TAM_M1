@@ -72,7 +72,7 @@ softwareupdate --install-rosetta --agree-to-license
 
 TAM has a mode where it can be run entirely from a folder. This was originally done so they could "distribute" TAM on those little blue Echometer USB drives. The INI and wells data folder live entirely within this "DistributedTAM" folder, so you should be able to just extract the following zip somewhere and just double-click the "TAM Application.exe" file.
 
-[TODO: TAM 1.9.26 release zip](https://github.com/wansco/TAM_M1/releases/download/TAM_1.9.26/TAM_1.9.26.zip)
+[TAM 1.9.26 release zip](https://github.com/wansco/TAM_M1/releases/download/TAM_1.9.26/TAM_1.9.26.zip)
 
 Note: this zip file doesn't include any of the example wells. You'll have to import those separately.
 <br /><br />
