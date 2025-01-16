@@ -1,15 +1,15 @@
 # TAM - Total Asset Monitor
 
-Run TAM on your apple silicon mac (or Intel Macs... and Linux too)
+Run TAM on your Apple silicon Mac (or Intel Macs... and Linux too)
 
 **Disclaimer #1**: This is not an officially sanctioned project. Basically, if something goes wrong, complain to me... if it works, let the folks at Echometer know.
 
-**Disclaimer #2**: This involves command-line instructions and has the potential to completely destroy your OS and/or data. If you are not comfortable in a terminal, turn back now.
+**Disclaimer #2**: This involves command-line instructions and has the potential to completely destroy your OS and/or data. If you are not comfortable in a terminal, turn back now. (It's really just copying and pasting 4 lines... but this is your official cautionary warning)
 
-**Disclaimer #3**: Connecting to the Echometer sensors is not supported. This is only for opening/viewing data that was collected through the officially supported windows program.
+**Disclaimer #3**: Live data acqusition is not supported. The method below doesnt easily support USB devices. This is only for opening/viewing data that was collected through the officially supported windows program.
 
 # The problem
-TAM is a windows program and is heavily tied to system specific libraries and components. Compiling TAM to run natively on a non-intel, non-windows system would require significant work and is not on the roadmap. There are many interesting things on that roadmap, and you should talk to Echometer at their booth at one of the many tradeshows, or attend one of their classes.
+TAM is a windows program and is heavily tied to system specific libraries and components. Compiling TAM to run natively on a non-Intel, non-Windows system would require significant work and is not currently on the roadmap. There are many interesting things on that roadmap, and you should talk to Echometer at their booth at one of the many tradeshows, or attend one of their classes.
 https://echometer.com/Training
 
 ## Options:
@@ -23,16 +23,18 @@ A virtual machine such as VirtualBox doesnt yet fully support emulating x86 proc
 
 # The solution
 
-Wine is a utility to natively run windows binaries on non-windows systems.
-Rosetta is a macos utility to run x86 binaries on the M1.
-By combining the 2, we can run x86 windows binaries on the ARM-based M1/M2/M3/M4... but it isn't always easy. (Actually it isn't nearly as hard as it sounds)
+[Wine](https://www.winehq.org/) is a utility to natively run windows binaries on non-windows systems.
+Rosetta is a Mcos utility to run x86 binaries on the M1.
+By combining the 2, we can run x86 Windows binaries natively on the ARM-based M1/M2/M3/M4... but it isn't always easy. (Actually it isn't nearly as hard as it sounds)
 
-Note: this also works on Intel macs, but it is advisable to use a VM like Virtualbox or Parallels running the intel version of Windows.
+Note: this also works on Intel Macs, but it is advisable to use a VM like Virtualbox or Parallels running the Intel version of Windows.
 
-This also works on Linux, but the instructions below don't apply. If you're running Linux, just install wine and winbind and then skip to the last step.
+This also works on Linux, but the instructions below don't apply. If you're running Linux, just install wine and winbind and then skip to the last step <sub>If you're running Linux, you should know how to do that... right?.</sub>
 
 
 ## Steps
+
+Open the Mac terminal. Get redy to copy and paste a few commands...
 
 ### Install Homebrew:
 
@@ -52,7 +54,7 @@ brew tap homebrew/cask-versions
 brew install --cask --no-quarantine wine-stable
 ```
 
-### Enable Rosetta (ARM Macs)
+### Enable Rosetta (ARM Macs only)
 
 At the end of the wine install above, the terminal should print the following message:
 <pre>
@@ -70,11 +72,11 @@ softwareupdate --install-rosetta --agree-to-license
 
 ### Run TAM:
 
-TAM has a mode where it can be run entirely from a folder. This was originally done so they could "distribute" TAM on those little blue Echometer USB drives. The INI and wells data folder live entirely within this "DistributedTAM" folder, so you should be able to just extract the following zip somewhere and just double-click the "TAM Application.exe" file.
+TAM has a mode where it can be run entirely isolated from a folder. This was originally done so they could "distribute" TAM on those little blue Echometer USB drives. The INI and wells data folder live within this "DistributedTAM" folder, so you should be able to just extract the following zip somewhere and just double-click the "TAM Application.exe" file.
 
 [TAM 1.9.26 release zip](https://github.com/wansco/TAM_M1/releases/download/TAM_1.9.26/TAM_1.9.26.zip)
 
-Note: this zip file doesn't include any of the example wells. You'll have to import those separately.
+Note: this zip file doesn't include any of the example wells. You'll have to import those separately. Let me know if you need those.
 <br /><br />
 
 
