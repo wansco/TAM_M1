@@ -24,7 +24,7 @@ A virtual machine such as VirtualBox doesnt yet fully support emulating x86 proc
 # The solution
 
 [Wine](https://www.winehq.org/) is a utility to natively run windows binaries on non-windows systems.
-Rosetta is a Mcos utility to run x86 binaries on the M1.
+Rosetta is a Macos utility to run x86 binaries on the M1.
 By combining the 2, we can run x86 Windows binaries natively on the ARM-based M1/M2/M3/M4... but it isn't always easy. (Actually it isn't nearly as hard as it sounds)
 
 Note: this also works on Intel Macs, but it is advisable to use a VM like Virtualbox or Parallels running the Intel version of Windows.
