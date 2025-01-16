@@ -83,6 +83,27 @@ Note: this zip file doesn't include any of the example wells. You'll have to imp
 At this point you should be able to just double-click the "TAM Application.exe" file from that unzipped folder.
 
 
+### Automated TAM Download
+
+Or, if you're already in the terminal, you could copy/paste the following:
+
+```
+curl -LO https://github.com/wansco/TAM_M1/releases/latest/download/TAM.zip
+unzip TAM.zip
+rm TAM.zip
+```
+The above downloads and extracts the zip file. Open that folder and double-click "TAM Application.exe"
+
+And if you want to see the example wells, do the following:
+
+```
+curl -LO https://github.com/wansco/TAM_M1/raw/refs/heads/main/Wells.zip
+mkdir -p TAM/Echometer/TAM
+unzip ./Wells.zip -d ./TAM/Echometer/TAM/
+rm Wells.zip
+```
+The above commands downloads the example Wells and extracts them to the right place in the TAM folder you created above. Fire up TAM (or restart TAM if it was still running) and you should be able to "Pick Well" in the top left.
+
 
 
 # Troubleshooting
@@ -93,6 +114,13 @@ Is wine installed and functional? Try running notepad.
 
 ```
 wine ~/.wine/drive_c/windows/notepad.exe
+```
+
+
+The wine installer via Macos & Homebrew configures EXE files to run by just doubleclicking. On Linux you need to do a few extra steps to get the doubleclick. Alternatively you can try this from wherever you extracted the TAM folder:
+
+```
+wine "TAM Application.exe"
 ```
 
 Don't submit crash reports because that'll just confuse things. Remember, this is unsupported. Contact me if something goes wrong.
